@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>امتحان اللغة العربية – الصف الثالث الثانوي</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#f3f7f7;--sf:#fff;--ink:#14232b;--mu:#566870;--ln:#d2dcdf;--ac:#0b6b6e;--on:#fff;--sel:#dff0f0;--ok:#17703d;--okb:#e2f4e9;--bd:#b3261e;--bdb:#fbe8e6;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a1f;--sf:#162830;--ink:#e8eff1;--mu:#9db0b7;--ln:#2c434c;--ac:#5cc4c0;--on:#08201f;--sel:#1b3d42;--ok:#6fd49b;--okb:#15321f;--bd:#ff9a90;--bdb:#3a1d1a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1a1f;--sf:#162830;--ink:#e8eff1;--mu:#9db0b7;--ln:#2c434c;--ac:#5cc4c0;--on:#08201f;--sel:#1b3d42;--ok:#6fd49b;--okb:#15321f;--bd:#ff9a90;--bdb:#3a1d1a;color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 90px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Naskh Arabic","Amiri","Traditional Arabic",Tahoma,Arial,sans-serif;font-size:19px;line-height:2}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--sf);z-index:10}
+[hidden]{display:none!important}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--sf);border-bottom:1px solid var(--ln);padding:8px 16px 0}
+.hi{max-width:780px;margin:0 auto;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+h1{font-size:20px;margin:0;font-weight:700}
+#cnt{font-size:16px;color:var(--mu)}
+.pb{height:4px;background:var(--ln);margin:6px -16px 0}
+#bar{height:100%;width:0;background:var(--ac);transition:width .25s}
+main{max-width:780px;margin:0 auto;padding:16px}
+h2.sec{font-size:21px;margin:26px 0 12px;padding:6px 14px;background:var(--ac);color:var(--on);border-radius:8px}
+.q{background:var(--sf);border:1px solid var(--ln);border-radius:10px;padding:14px 16px;margin-bottom:14px}
+.qh{display:flex;gap:12px;align-items:flex-start}
+.qh p{margin:0;font-weight:600}
+.n{flex:none;width:34px;height:34px;margin-top:6px;border-radius:50%;background:var(--ac);color:var(--on);display:grid;place-items:center;font-size:17px;font-weight:700;line-height:1}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:8px;margin-top:10px}
+.opt{display:flex;gap:10px;align-items:center;padding:6px 12px;border:1.5px solid var(--ln);border-radius:8px;cursor:pointer;line-height:1.7}
+.opt input{width:18px;height:18px;accent-color:var(--ac);flex:none;margin:0}
+.opt .l{font-weight:700;color:var(--ac);flex:none}
+.opt.on{border-color:var(--ac);background:var(--sel)}
+.opt:focus-within{outline:2px solid var(--ac);outline-offset:2px}
+.act{text-align:center;margin:24px 0 40px}
+button{font:inherit;font-weight:700;font-size:20px;padding:8px 34px;border:0;border-radius:10px;background:var(--ac);color:var(--on);cursor:pointer}
+button:disabled{opacity:.45;cursor:not-allowed}
+button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+#hint{margin:8px 0 0;font-size:16px;color:var(--mu)}
+.sum{text-align:center;background:var(--sf);border:1px solid var(--ln);border-radius:12px;padding:22px 16px;margin-bottom:8px}
+.big{font-size:56px;font-weight:700;line-height:1.3;color:var(--ac)}
+.sum p{margin:4px 0}
+.sub{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;color:var(--mu);font-size:17px}
+.r.good{border-inline-start:6px solid var(--ok)}
+.r.bad{border-inline-start:6px solid var(--bd)}
+.st{font-size:16px;font-weight:700;margin:6px 0 0}
+.good .st{color:var(--ok)}.bad .st{color:var(--bd)}
+.opt.right{border-color:var(--ok);background:var(--okb)}
+.opt.wrong{border-color:var(--bd);background:var(--bdb)}
+.opt .tag{margin-inline-start:auto;font-size:15px;font-weight:700}
+.right .tag{color:var(--ok)}.wrong .tag{color:var(--bd)}
+.ex{margin:10px 0 0;padding:8px 12px;background:var(--bg);border-radius:8px;font-size:17px;line-height:1.9}
+@media (max-width:520px){body{font-size:18px}.big{font-size:46px}}
+</style>
+</head>
+<body>
+<header><div class="hi"><h1>امتحان اللغة العربية – الصف الثالث الثانوي</h1><span id="cnt"></span></div><div class="pb"><div id="bar"></div></div></header>
+<main>
+<div id="exam"><div id="qs"></div>
+<div class="act"><button id="sub" type="button" disabled>تسليم الإجابات</button><p id="hint"></p></div></div>
+<div id="res" hidden></div>
+</main>
+<script>
+const SECT=["أولاً: الأدب العربي (6 درجات)","ثانياً: القواعد النحوية (6 درجات) – الوحدتان الأولى والثانية"];
+const L=["أ","ب","ج","د"];
+const Q=[
+{q:"يقول أحمد شوقي: «إِنَّ الَّذِي مَلَأَ اللُّغَاتِ مَحَاسِناً ... جَعَلَ الجَمَالَ وَسِرَّهُ فِي الضَّادِ». مظهر التطوير الذي يمثله البيت عند شعراء الكلاسيكية الجديدة هو:",o:["الاتجاه بالشعر اتجاهاً تاريخياً ومسرحياً","الاهتمام بالناحية البيانية والدفاع عن اللغة العربية","التعبير عن روح العصر اجتماعياً وفكرياً","التمسك التام بالوقوف على الأطلال"],a:1,e:"البيت يعبّر عن اعتزاز الشاعر باللغة العربية ودفاعه عنها واهتمامه بجمالها البياني."},
+{q:"استهل شعراء المدرسة الكلاسيكية الجديدة كثيراً من قصائدهم بالطريقة القديمة، وتمثل ذلك بـ:",o:["البدء بالحديث عن المخترعات الحديثة","الوقوف على الأطلال ونسيب الغزل التقليدي","استخدام الشعر المقطعي المتنوع","التعبير عن الأحزان والآلام النفسية"],a:1,e:"حافظوا على مطالع القصيدة القديمة: الوقوف على الأطلال والنسيب التقليدي."},
+{q:"المفهوم الشعري الأساسي الذي قامت عليه مدرسة «الديوان» على يد العقاد والمازني وشكري هو أن:",o:["القصيدة وحدة بيانية تقوم على تفكك الأبيات","الشعر كائن حي لكل جزء فيه وظيفته العضوية","الشعر التزام تام بالمناسبات والمحافل الرسمية","القصيدة تقليد شكلي ومضموني للقدماء"],a:1,e:"ترى مدرسة الديوان القصيدة كائناً حياً متكامل الأجزاء، أي إنها تقوم على الوحدة العضوية."},
+{q:"من المآخذ الرئيسية التي عابها رواد مدرسة الديوان على شعراء المدرسة الكلاسيكية الجديدة:",o:["طغيان الجانب الفكري الجاف على التعبير","الاهتمام الشديد بشعر المناسبات والموضوعات الذاتية","طغيان شعر المناسبات وعدم وضوح الشخصية الشعرية","التجديد الصارم في أوزان الشعر وقوافيه"],a:2,e:"عابوا عليهم كثرة شعر المناسبات وغياب الشخصية الشعرية الواضحة."},
+{q:"قام الاتجاه الوجداني (الرومانتيكي) عند رائدة خليل مطران على أساس:",o:["محاكاة الشعراء القدامى في انتماءاتهم البيئية","اكتشاف الفرد لذاته والتطلع للمثل العليا والجمال","الانغماس في شعر المناسبات والقضايا السياسية","غلبة الذهنية والجانب الفكري على العاطفة"],a:1,e:"الاتجاه الوجداني يقوم على اكتشاف الفرد لذاته والتطلع إلى المثل العليا والجمال."},
+{q:"تتميز قصيدة الاتجاه الوجداني عند خليل مطران مقارنة بالقصيدة الكلاسيكية بأنها:",o:["متعددة الأغراض ومفككة الأجزاء","تقوم على الوحدة العضوية وتناسق الفكر والشعور","تعتمد على اللفظ التراثي المعجمي الصعب","تهمل التعبير عن الذات والعواطف الصادقة"],a:1,e:"قصيدة مطران وحدة عضوية متناسقة الفكر والشعور، بخلاف القصيدة الكلاسيكية متعددة الأغراض."},
+{q:"ميز الكلمة التي بدأت بـ (همزة قطع) لأنها مصدر لفعل رباعي مما يلي:",o:["اسْتِغْفَار","إِحْسَان","انْتِصَار","أُمُومَة"],a:1,e:"«إحسان» مصدر الفعل الرباعي «أَحْسَنَ»، فهمزته همزة قطع. أما «استغفار» و«انتصار» فمصدرا فعلين سداسي وخماسي همزتهما همزة وصل، و«أمومة» ليست مصدراً لفعل رباعي."},
+{q:"التثنية الصحيحة للاسم الممدود (صَحْرَاء) في حالة النصب أو الجر هي:",o:["صَحْرَاءَيْنِ","صَحْرَاوَيْنِ","صَحْرَاءَانِ","صَحْرَاوَات"],a:1,e:"همزة «صحراء» للتأنيث، فتُقلب واواً عند التثنية: صحراوان في الرفع، وصحراوين في النصب والجر."},
+{q:"عند جمع الاسم المقصور (أَعْلَى) جمع مذكر سالماً، تكون الصياغة الصحيحة في حالتي الرفع والنصب/الجر:",o:["أَعْلَيُون / أَعْلَيِين","أَعْلَوْن / أَعْلَيْن","أَعْلَاوُون / أَعْلَاوِين","أَعْلَيَات / أَعْلِيَات"],a:1,e:"عند جمع المقصور جمع مذكر سالماً تُحذف ألفه ويبقى ما قبلها مفتوحاً: أَعْلَوْن رفعاً، وأَعْلَيْن نصباً وجراً."},
+{q:"حدد الجملة التي عمل فيها اسم الفاعل عمل فعله لاعتماده على مبتدأ مع دلالته على الحال أو الاستقبال:",o:["حَضَرَ الطَّالِبُ الكَاتِبُ دَرْسَهُ","المُنْفِقُ مَالَهُ فِي الخَيْرِ مَأْجُورٌ","الجُنْدِيُّ حَامِلٌ سِلَاحَهُ اليَوْمَ","يَا طَالِعاً جَبَلاً احْتَرِسْ"],a:2,e:"«حامل» اسم فاعل وقع خبراً للمبتدأ «الجندي» ودل على الحال (اليوم) فنصب المفعول به «سلاحه». في (أ) اعتمد على موصوف، وفي (ب) عمل لاقترانه بـ«أل»، وفي (د) اعتمد على نداء."},
+{q:"قال تعالى: (إِنَّ اللَّهَ عَلِيمٌ بِذَاتِ الصُّدُورِ). سبب عمل صيغة المبالغة (عَلِيم) في الآية الكريمة أنها:",o:["اقترنت بـ (أل) التعريفية","اعتمدت على موصوف محذوف","وقعت خبراً لما أصله مبتدأ (اسم إنَّ)","اعتمدت على نفي سابق"],a:2,e:"«عليم» صيغة مبالغة وقعت خبراً لـ«إنَّ» التي اسمها أصله مبتدأ، فاعتمدت على المخبر عنه وعملت عمل فعلها."},
+{q:"ميز الجملة التي اشتملت على مصدر ميمي مما يلي:",o:["المَطَارُ مُلْتَقَى الحُجَّاجِ","الصَّبَاحُ مُلْتَقَى الطُّلَّابِ","الْتَقَيْتُ بِكُمْ مُلْتَقًى كَرِيماً","البِتْرُولُ مُسْتَخْرَجٌ مِنَ الأَرْضِ"],a:2,e:"«مُلْتَقًى» في (ج) مصدر ميمي بمعنى «لقاءً»، وهو مفعول مطلق. أما في (أ) فاسم مكان، وفي (ب) اسم زمان، و«مستخرج» في (د) اسم مفعول."}
+];
+const ans=Array(Q.length).fill(null);
+const $=id=>document.getElementById(id);
+function build(){
+  let h="";
+  Q.forEach((q,i)=>{
+    if(i===0||i===6)h+=`<h2 class="sec">${SECT[i<6?0:1]}</h2>`;
+    h+=`<div class="q" role="radiogroup" aria-labelledby="t${i}"><div class="qh"><span class="n">${i+1}</span><p id="t${i}">${q.q}</p></div><div class="opts">`+
+      q.o.map((o,j)=>`<label class="opt"><input type="radio" name="q${i}" value="${j}"><span class="l">${L[j]})</span><span>${o}</span></label>`).join("")+`</div></div>`;
+  });
+  $("qs").innerHTML=h;
+}
+function upd(){
+  const n=ans.filter(a=>a!==null).length,t=Q.length;
+  $("cnt").textContent=`أجبت عن ${n} من ${t}`;
+  $("bar").style.width=(n/t*100)+"%";
+  $("sub").disabled=n<t;
+  $("hint").textContent=n<t?`الأسئلة المتبقية: ${t-n}. تظهر النتيجة بعد الإجابة عن كل الأسئلة.`:"أجبت عن كل الأسئلة. يمكنك تعديل أي إجابة قبل التسليم.";
+}
+$("qs").addEventListener("change",e=>{
+  const r=e.target;if(r.type!=="radio")return;
+  ans[+r.name.slice(1)]=+r.value;
+  r.closest(".opts").querySelectorAll(".opt").forEach(l=>l.classList.toggle("on",l.querySelector("input").checked));
+  upd();
+});
+$("sub").addEventListener("click",()=>{
+  if(ans.some(a=>a===null))return;
+  const ok=Q.map((q,i)=>ans[i]===q.a);
+  const s=ok.filter(Boolean).length,t=Q.length,p=Math.round(s/t*100);
+  const s1=ok.slice(0,6).filter(Boolean).length,s2=ok.slice(6).filter(Boolean).length;
+  const v=p>=90?"ممتاز! أداء رائع.":p>=75?"جيد جداً، استمر على هذا المستوى.":p>=60?"جيد، وبقليل من المراجعة ستتحسن نتيجتك.":"تحتاج إلى مراجعة الدروس ثم إعادة المحاولة.";
+  let h=`<div class="sum"><div>النتيجة النهائية</div><div class="big">${s} / ${t}</div><p>النسبة المئوية: ${p}%</p><p><strong>${v}</strong></p><div class="sub"><span>الأدب العربي: ${s1} / 6</span><span>القواعد النحوية: ${s2} / 6</span></div></div><h2 class="sec">مراجعة الإجابات</h2>`;
+  Q.forEach((q,i)=>{
+    h+=`<div class="q r ${ok[i]?"good":"bad"}"><div class="qh"><span class="n">${i+1}</span><p>${q.q}</p></div><div class="opts">`+
+      q.o.map((o,j)=>{
+        const c=j===q.a?"right":(j===ans[i]?"wrong":"");
+        const tg=j===q.a?(j===ans[i]?"إجابتك الصحيحة":"الإجابة الصحيحة"):(j===ans[i]?"إجابتك":"");
+        return `<div class="opt ${c}"><span class="l">${L[j]})</span><span>${o}</span>${tg?`<span class="tag">${tg}</span>`:""}</div>`;
+      }).join("")+`</div><p class="st">${ok[i]?"إجابة صحيحة":"إجابة خاطئة"}</p><p class="ex">${q.e}</p></div>`;
+  });
+  h+=`<div class="act"><button id="again" type="button">إعادة الامتحان</button></div>`;
+  $("res").innerHTML=h;
+  $("exam").hidden=true;$("res").hidden=false;
+  $("cnt").textContent="تم تسليم الامتحان";$("bar").style.width="100%";
+  window.scrollTo(0,0);
+  $("again").addEventListener("click",()=>{
+    ans.fill(null);build();upd();
+    $("res").hidden=true;$("exam").hidden=false;window.scrollTo(0,0);
+  });
+});
+build();upd();
+</script>
+</body>
+</html>
